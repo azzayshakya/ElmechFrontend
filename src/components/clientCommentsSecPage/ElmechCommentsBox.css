@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .ElmechCommentsSecPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    background: #221d2d;
+    color: #fdfcfd;
+    font-family: "Euclid Circular A", "Poppins", sans-serif;
+    /* border: 2px red solid; */
+    padding: 5rem 10rem; 
+
+  }
+  .commentsHeader {
+    text-align: left;
+    margin-bottom: 20px;
+    /* border: 2px red solid; */
+
+  }
+  .commentsHeaderTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .commentsHeader span {
+   
+    font-size: 40px;
+    font-weight: bolder;
+    /* color: #555; */
+    color: #fff;
+    margin-bottom: 0px;
+    
+  }
+  
+  .commentsHeader p {
+    font-size: 1.25rem;
+    /* font-weight: bold; */
+    color: #d3d3d3;
+    display: block;
+    margin: 2rem 0rem;
+   
+
+
+  }
+  
+  .button-22 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* margin-left: 0.5rem; */
+  
+  }
+  
+  .button-22:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(0deg);
+  }
+  
+  
+
+  .card {
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    max-width: 650px;
+    padding: 50px 30px 50px 20px;
+    background: #121017;
+    border-radius: 24px;
+    /* border: 2px red solid; */
+
+  }
+  
+  .card img {
+    max-width: 280px;
+    width: 35vw;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+  }
+  
+  .card h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.75;
+  }
+  
+  .card p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.5;
+  }
+  
+  .card button {
+    border: 1px solid #f8f8f8;
+    background: transparent;
+    color: #f8f8f8;
+    font-family: inherit;
+    padding: 16px 26px;
+    font-size: 16px;
+    border-radius: 40px;
+  }
+  @media (max-width: 1024px) {
+    .ElmechCommentsSecPage{
+      padding:  2rem 3.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .commentsHeaderTop{
+    flex-direction: column;
+    align-items:flex-start;
+    }
+
+  }
+  @media (max-width: 600px) {
+    .card {
+      margin: 0 40px;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 60px;
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .card h2 {
+      margin-right: 0;
+      font-size: 26px;
+    }
+  
+    .card img {
+      margin: -100px 0 30px 0;
+      width: 100%;
+      max-width: 1000px;
+      height: 250px;
+    }
+  
+    .card p {
+      max-width: 360px;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .card{
+      margin-top: 50px;
+    }
+    .card img {
+      height: 45vw;
+      width: 45vw;
+      border-radius: 50%;
+      margin: -140px 0 30px 0;
+    }
+  }
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .commentsHeader span,
+  .commentsHeader p,
+  .button-22,
+  .card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.5s forwards;
+  }
+  
+  .commentsHeader span {
+    animation-delay: 0.2s;
+  }
+  
+  .commentsHeader p {
+    animation-delay: 0.4s;
+  }
+  
+  .button-22 {
+    animation-delay: 0.6s;
+  }
+  
+  .card {
+    animation-delay: 0.8s;
+  }
+  

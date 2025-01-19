@@ -1,0 +1,72 @@
+/* General Styles for Updates Page */
+.updates-page-container {
+  font-family: 'Arial', sans-serif;
+  /* background-color:white;  */
+  padding: 40px 20px;
+  color: #495057; /* Slightly softer dark color */
+}
+
+.updates-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.updates-page-title {
+  font-size: 2.5rem; /* Adjusted for better scaling */
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.updates-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.update-section {
+  margin-bottom: 50px;
+}
+
+.update-version {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #212529; /* Slightly darker text for better readability */
+  border-bottom: 2px solid #dee2e6; /* Soft separator line */
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.update-list {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.75;
+  padding-left: 20px;
+  list-style-type: disc; /* Standard bullet list style */
+}
+
+.update-list li {
+  margin-bottom: 12px;
+}
+
+.update-link {
+  font-size: 1rem;
+  color: #ff6f00; /* More vibrant color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth color change effect */
+}
+
+.update-link:hover {
+  color: #d35400; /* Slightly darker hover color */
+  text-decoration: underline;
+}
+
+.updates-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.updates-footer p {
+  font-size: 0.875rem;
+  color: #adb5bd;
+}

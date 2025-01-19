@@ -1,0 +1,136 @@
+
+
+.mainHome .homeSlideView {
+    /* Keep background image properties intact */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: background-image 1s ease-in-out;
+    
+
+}
+
+.navBarAtHome {
+    /* Navbar styles can be customized here if needed */
+}
+
+.firstSlide {
+    /* padding: 50px 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height to center the content */
+    text-align: center; 
+}
+
+.FirstSlideTagLine {
+    /* padding: 50px 150px; */
+}
+
+.word-roller {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.2em; 
+    position: relative;
+}
+
+.roller-word {
+    display: inline-block;
+    position: absolute;
+    /* animation: rollIn 1s ease forwards; */
+}
+
+
+.roller-word.visible {
+    opacity: 1;
+    position: relative;
+}
+
+
+@keyframes rollIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.firstSlide span {
+    font-weight: bold;
+    font-size: 30px;
+    color: orange;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.firstSlide p {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 15px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .FirstSlideTagLine {
+        /* padding: 50px 100px;  */
+    }
+
+    .firstSlide span {
+        font-size: 26px; /* Adjust font size for medium screens */
+    }
+
+    .firstSlide p {
+        font-size: 40px; /* Adjust font size for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .FirstSlideTagLine {
+        /* border: 1px red solid; */
+        /* padding: 0px 50px;  */
+    }
+
+    .firstSlide span {
+        font-size: 22px; /* Adjust font size for tablets */
+    }
+
+    .firstSlide p {
+        font-size: 30px; /* Adjust font size for tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .FirstSlideTagLine {
+        /* padding: 20px 20px;  */
+    }
+
+    .firstSlide span {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .firstSlide p {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+}
+
+.FirstSlideImages{
+    
+    /* border: 1px blue solid; */
+    margin: 0px 150px;
+
+}
+
+.firstSlide img{
+        width:100%;
+        max-height: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50px;
+}

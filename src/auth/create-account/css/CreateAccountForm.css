@@ -1,0 +1,197 @@
+
+.createAccountMain{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-account-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem 3rem 2rem 2rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+ 
+}
+
+.create-account-form h2 {
+  font-size: 2rem;
+    font-weight: bold;
+    color:#000;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+.create-account-form p {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  /* border: 2px red solid; */
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputBox {
+  flex: 1;
+  /* height: 2rem; */
+}
+
+.inputBox input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.inputBox label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+
+.inputboxWithError {
+  /* border: 2px  red solid; */
+  height: 4.5rem;
+
+}
+.inputboxWithError span{
+  /* border: 2px red solid; */
+  display: block;
+  text-align: left;
+  /* margin-bottom: 10px; */
+  color: red;
+  font-size: 0.8rem;
+  margin-top:-01rem;
+  font-weight:lighter;
+  height: 1.5rem;
+  letter-spacing: 1px;
+}
+/* Gender Section */
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0rem;  
+}
+
+.checkboxGroup .checkboxGroupLabelForGender {
+  letter-spacing: 1px;
+  color: #000;
+  z-index: 100;
+  flex: 1;
+
+}
+
+.checkboxGroup  .checkboxGroupOption .checkboxGroupFirstOption{
+ margin-right:30px; 
+}
+.checkboxGroup .checkboxGroupOption label {
+  color: #000;
+  
+}
+.checkboxGroupWithError span{
+  display: block;
+  text-align: left;
+  /* margin-bottom: 10px; */
+  color: red;
+  font-size: 0.8rem;
+  /* margin-top:-01rem; */
+  font-weight:lighter;
+  height: 1.5rem;
+  letter-spacing: 1px;
+
+}
+
+
+.termsCheckbox {
+  font-size:1rem;
+  color:#000;
+}
+
+.termsCheckbox input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Change background color when checked */
+.termsCheckbox input[type="checkbox"]:checked {
+  background-color: #4141fe;
+  border-color: #4141fe;
+}
+
+/* Custom checkmark when checked */
+.termsCheckbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+.termsCheckboxWithErrors span{
+  display: block;
+  text-align: left;
+  /* margin-bottom: 10px; */
+  color: red;
+  font-size: 0.8rem;
+  /* margin-top:-01rem; */
+  font-weight:lighter;
+  height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.termsCheckbox  label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+
+.CreateAccountSubmitButton{
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 0.5rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.CreateAccountSubmitButton:hover {
+  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+  transform: scale(1.05) rotate(0deg);
+}

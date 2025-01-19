@@ -1,0 +1,224 @@
+.ClientcommentsPage{
+    /* padding: 5rem 10rem; */
+    min-height: 30rem;
+    background-color: #f9f9f9;
+
+
+}
+.commentsIntro {
+    border-top: 1px #777 solid;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+}
+
+.commentsIntro h2 {
+    font-size: 2em; 
+    font-weight: bold;
+    color: lightgreen;
+    transition: font-size 0.3s ease; 
+}
+
+.commentsIntro a {
+    text-decoration: none;
+    padding: 15px;
+    background-color: lightgreen;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, font-size 0.3s ease; /* Smooth transitions */
+}
+
+.commentsIntro a:hover {
+    /* background-color: green;
+    transform: translateY(-2px); */
+  
+}
+
+
+.commentsIntro p {
+    font-size: 1.2em;
+    
+}
+
+.commentsContainer {
+    /* border: 2px red solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap; 
+    /* padding: 20px; */
+    /* position: relative; */
+}
+
+
+.commentBox {
+    width: 400px;
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: #fff;
+
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    /* border: 2px red solid; */
+}
+
+.commentBox:hover {
+    transform: translateY(-5px);
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.userPhoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.userInfo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.userInfo p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eaeaea;
+
+}
+
+.commentContent {
+    display: flex;
+    align-items: flex-start;
+}
+
+.quoteIcon {
+    color: #ff7f00;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.commentContent p {
+    font-size: 1rem;
+    color: #555;
+    
+    line-height: 1.5;
+}
+
+
+@media (max-width: 1040px) {
+    .commentsIntro {
+           padding: 0rem 3rem;
+          
+    
+    }
+    .ClientcommentsPage{
+        
+        min-height: 45rem;
+    }
+    
+}
+@media (max-width: 1024px) {
+    .commentsIntro {
+           padding: 0rem 3rem;
+          
+    
+    }
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commentsContainer {
+        flex-direction: column; 
+     /* padding:0rem 3.5rem; */
+     overflow-x: scroll;
+    }
+
+    .commentBox {
+        width: 70%; 
+        /* margin: 10px 10px;  */
+        /* padding: ; */
+    }
+    .ClientcommentsPage{
+        
+        max-height: 40rem;
+        /* border: 1px green solid; */
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .commentBox {
+        padding: 15px;
+    }
+
+    .userPhoto {
+        width: 50px; /* Slightly reduce user photo size for mobile */
+        height: 50px;
+    }
+
+    .userInfo h3 {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .userInfo p {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
+
+.commentsIntro a:hover {
+    background-color: #ff5500;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commentsIntro {
+        flex-direction: column; /* Switch to column layout */
+        padding: 1rem; /* Reduce padding */
+        gap: 1rem; /* Add spacing between elements */
+    }
+
+    .commentsIntro h2 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .commentsIntro a {
+        font-size: 1rem; /* Adjust font size for the  */
+    }
+}
+
+@media (max-width: 480px) {
+    .commentsIntro h2 {
+        font-size: 1.5rem; /* Further adjust font size for smaller devices */
+    }
+
+    .commentsIntro a {
+        font-size: 0.9rem; /* Further adjust  font size */
+    }
+}
