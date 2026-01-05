@@ -4,6 +4,6 @@ export const commentDto = (data) => ({
   phone: data.phone,
   email: data.email,
   profession: data.profession,
-  gender: data.gender, 
+  gender: data.gender,
   comment: data.comment,
 });

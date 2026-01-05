@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Navigate } from "react-router-dom";
-import  useAuth  from "../hooks/useAuth"; 
+import React, { useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 /**
  * ProtectedRoute Component
@@ -11,7 +11,7 @@ import  useAuth  from "../hooks/useAuth";
  */
 const ProtectedRoute = ({ children }) => {
   // Get the current user from the authentication context
-  const { user } = useAuth(); 
+  const { user } = useAuth();
 
   useEffect(() => {
     if (!user) {
@@ -26,7 +26,7 @@ const ProtectedRoute = ({ children }) => {
 
 // Protecting login route for authenticated users
 const ProtectedLoginRoute = ({ children }) => {
-  const { user } = useAuth(); 
+  const { user } = useAuth();
 
   // If the user is already authenticated, redirect them to a different page (like home or dashboard)
   if (user) {

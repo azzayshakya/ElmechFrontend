@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Services.css';
-import { IoConstructOutline } from "react-icons/io5";
-import { PiFireTruckBold } from "react-icons/pi";
-import { MdPlumbing } from "react-icons/md";
-import { GiElectricalResistance } from "react-icons/gi";
+import { IoConstructOutline } from 'react-icons/io5';
+import { PiFireTruckBold } from 'react-icons/pi';
+import { MdPlumbing } from 'react-icons/md';
+import { GiElectricalResistance } from 'react-icons/gi';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Services() {
@@ -36,33 +36,39 @@ export default function Services() {
             {
               icon: <IoConstructOutline />,
               title: 'WHAT WE DO',
-              description: 'Transforming ideas into reality with innovative solutions, exceptional quality, and a commitment to excellence. Explore the range of services we provide to bring your projects to life with precision and expertise.',
+              description:
+                'Transforming ideas into reality with innovative solutions, exceptional quality, and a commitment to excellence. Explore the range of services we provide to bring your projects to life with precision and expertise.',
               isFirst: true,
             },
             {
               icon: <GiElectricalResistance />,
               title: 'Electrical System',
-              description: 'Safe, efficient electrical systems designed to power your building reliably and effectively.',
+              description:
+                'Safe, efficient electrical systems designed to power your building reliably and effectively.',
             },
             {
               icon: <i className="fa-solid fa-screwdriver-wrench"></i>,
               title: 'Construction Consultant',
-              description: 'Get expert guidance for your project from start to finish, ensuring smooth and successful results.',
+              description:
+                'Get expert guidance for your project from start to finish, ensuring smooth and successful results.',
             },
             {
               icon: <PiFireTruckBold />,
               title: 'Fire Fighting System',
-              description: 'Protect your property with advanced fire safety systems that are reliable and ready when you need them.',
+              description:
+                'Protect your property with advanced fire safety systems that are reliable and ready when you need them.',
             },
             {
               icon: <MdPlumbing />,
               title: 'Plumbing Services',
-              description: 'Count on us for fast, dependable plumbing solutions that keep your systems running smoothly.',
+              description:
+                'Count on us for fast, dependable plumbing solutions that keep your systems running smoothly.',
             },
             {
               icon: <i className="fa-solid fa-trowel-bricks"></i>,
               title: 'Reconstruction Services',
-              description: 'We restore and rebuild with care, bringing new life to your property with quality and precision.',
+              description:
+                'We restore and rebuild with care, bringing new life to your property with quality and precision.',
             },
           ].map((service, index) => (
             <div
@@ -73,8 +79,8 @@ export default function Services() {
               {service.isFirst ? (
                 <>
                   <p className="TopRow">
-                    <span className='ServiceTopRowIcon'>{service.icon}</span>
-                    <span className='ServiceTopRowP'>{service.title}</span>
+                    <span className="ServiceTopRowIcon">{service.icon}</span>
+                    <span className="ServiceTopRowP">{service.title}</span>
                   </p>
                   <div className="bottomRow OtherServiceBox">
                     <span>Our services that we provided</span>
@@ -84,8 +90,8 @@ export default function Services() {
               ) : (
                 <>
                   <div className="logo">{service.icon}</div>
-                  <p className='OtherServiceBoxInfoTopRow'>{service.title}</p>
-                  <p className='OtherServiceBoxInfoBottomRow'>{service.description}</p>
+                  <p className="OtherServiceBoxInfoTopRow">{service.title}</p>
+                  <p className="OtherServiceBoxInfoBottomRow">{service.description}</p>
                 </>
               )}
             </div>

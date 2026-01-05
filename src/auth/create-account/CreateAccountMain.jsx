@@ -3,7 +3,7 @@ import CreateAccountForm from './components/CreateAccountForm';
 
 export default function CreateAccountMain() {
   return (
-    <div className='createAccountMain'>
+    <div className="createAccountMain">
       <CreateAccountForm />
     </div>
   );

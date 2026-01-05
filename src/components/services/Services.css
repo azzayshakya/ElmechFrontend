@@ -1,211 +1,190 @@
-.Service-page{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Service-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ServicesSlide {
-    padding: 5rem 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: auto; */
+  padding: 5rem 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: auto; */
 }
 .ServicesSlide {
-    opacity: 0;
-    transform: translateY(20rem);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .ServicesSlide.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+  opacity: 0;
+  transform: translateY(20rem);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.ServicesSlide.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .ServicesBoxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
 .ServiceBox {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    transition: border 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition:
+    border 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
 
 .ServiceBox:hover {
-    border: 3px solid lightgreen;
-    /* Orange border on hover */
-    transform: scale(1.05);
-    /* Slight scaling effect */
+  border: 3px solid lightgreen;
+  /* Orange border on hover */
+  transform: scale(1.05);
+  /* Slight scaling effect */
 }
 
 .ServiceBox .logo {
-    color: lightgreen;
-    font-size: 50px;
+  color: lightgreen;
+  font-size: 50px;
 
-    display: inline-block;
-    transition: transform 0.3s ease;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 .ServiceBox:hover .logo {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
-
 .FirstServiceBox {
-    background-color: #f9f9f9;
-    /* z-index: 1111; */
-    box-shadow: none;
-    /* border: 1px red solid; */
+  background-color: #f9f9f9;
+  /* z-index: 1111; */
+  box-shadow: none;
+  /* border: 1px red solid; */
 }
 
 .FirstServiceBox:hover {
-    border: none;
-    transform: none;
+  border: none;
+  transform: none;
 }
 
 .ServicesSlide .TopRow {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .FirstServiceBox .TopRow .ServiceTopRowIcon {
-    font-size: 20px;
-    color: lightgreen;
-
+  font-size: 20px;
+  color: lightgreen;
 }
 
 .FirstServiceBox .TopRow .ServiceTopRowP {
-    font-size: 20px;
+  font-size: 20px;
 
-    margin-left: 5%;
-    font-weight: lighter;
-
-
+  margin-left: 5%;
+  font-weight: lighter;
 }
 
 .FirstServiceBox .bottomRow {
-
-    text-align: left;
-
+  text-align: left;
 }
 
 .FirstServiceBox .bottomRow span {
-    color: black;
-    font-size: 30px;
-    text-align: left;
-
+  color: black;
+  font-size: 30px;
+  text-align: left;
 }
 
 .FirstServiceBox .bottomRow p {
-    text-align: left;
-    font-weight: lighter;
-    color: #777;
-
+  text-align: left;
+  font-weight: lighter;
+  color: #777;
 }
 
 .ServiceBox p {
-
-
 }
 
-
 .ServiceBox span {
-
 }
 
 .OtherServiceBox .logo {
-
 }
 
 .OtherServiceBox .OtherServiceBoxInfoTopRow {
-    margin-top: 20px;
-    font-size: 25px;
+  margin-top: 20px;
+  font-size: 25px;
 
-    text-align: left;
-
-
+  text-align: left;
 }
 
 .OtherServiceBox .OtherServiceBoxInfoBottomRow {
-
-    font-weight: lighter;
-    color: #666;
-    text-align: left;
-    z-index: 2;
-
-
-
+  font-weight: lighter;
+  color: #666;
+  text-align: left;
+  z-index: 2;
 }
 
-
 @media (max-width: 1024px) {
-    .ServicesSlide {
-        padding: 2rem 3.5rem;
-    }
+  .ServicesSlide {
+    padding: 2rem 3.5rem;
+  }
 
-    .ServicesBoxes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .ServicesBoxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    .ServicesSlide {
-        padding: 0 30px;
+  .ServicesSlide {
+    padding: 0 30px;
+  }
 
-    }
+  .ServicesBoxes {
+    grid-template-columns: 1fr;
+  }
 
-    .ServicesBoxes {
-        grid-template-columns: 1fr;
- 
-    }
-
-    .ServiceBox {       
-
-    }
+  .ServiceBox {
+  }
 }
 
 .ServiceBox {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Delayed animation for staggered boxes */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Delayed animation for staggered boxes */
-  @keyframes slideIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .ServicesBoxes .ServiceBox:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .ServicesBoxes .ServiceBox:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .ServicesBoxes .ServiceBox:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  .ServicesBoxes .ServiceBox:nth-child(4) {
-    animation-delay: 0.8s;
-  }
-  .ServicesBoxes .ServiceBox:nth-child(5) {
-    animation-delay: 1s;
-  }
-  .ServicesBoxes .ServiceBox:nth-child(6) {
-    animation-delay: 1.2s;
-  }
-  
+}
+
+.ServicesBoxes .ServiceBox:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.ServicesBoxes .ServiceBox:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.ServicesBoxes .ServiceBox:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.ServicesBoxes .ServiceBox:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.ServicesBoxes .ServiceBox:nth-child(5) {
+  animation-delay: 1s;
+}
+.ServicesBoxes .ServiceBox:nth-child(6) {
+  animation-delay: 1.2s;
+}

@@ -1,5 +1,4 @@
-Sidebar styles
-.sidebar {
+Sidebar styles .sidebar {
   position: fixed; /* Change from absolute to fixed */
   top: 0;
   right: 0;
@@ -51,7 +50,7 @@ main {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 2px;

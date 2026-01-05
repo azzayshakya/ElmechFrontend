@@ -6,10 +6,7 @@ const PopUpTest = () => {
 
   const addPopup = (message, type) => {
     // Add a new popup to the state
-    setPopups((prevPopups) => [
-      ...prevPopups,
-      { id: Date.now(), message, type },
-    ]);
+    setPopups((prevPopups) => [...prevPopups, { id: Date.now(), message, type }]);
   };
 
   const removePopup = (id) => {

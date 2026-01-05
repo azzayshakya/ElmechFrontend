@@ -1,10 +1,10 @@
-import React from 'react'
-import LoginPageForm from './component/LoginForm'
+import React from 'react';
+import LoginPageForm from './component/LoginForm';
 
 export default function LoginFormMain() {
   return (
-    <div className='LoginFormMainPage'>
+    <div className="LoginFormMainPage">
       <LoginPageForm />
     </div>
-  )
+  );
 }

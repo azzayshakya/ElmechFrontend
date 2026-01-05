@@ -13,18 +13,18 @@ export default function useSubmitGetInTouchForm(reset) {
   } = useMutation({
     mutationFn: submitTalkWithUs,
     onSuccess: () => {
-      toast.success("Thank you for contacting us! We’ve received your message and will get back to you shortly. 😊", {
-        duration: 5000,
-      });
-      navigate("/");
-
+      toast.success(
+        'Thank you for contacting us! We’ve received your message and will get back to you shortly. 😊',
+        {
+          duration: 5000,
+        }
+      );
+      navigate('/');
     },
     onError: (error) => {
-      toast.error('Oops! Something went wrong. Please try again later.')
-
+      toast.error('Oops! Something went wrong. Please try again later.');
     },
-    onSettled: () => {
-    },
+    onSettled: () => {},
   });
 
   return {

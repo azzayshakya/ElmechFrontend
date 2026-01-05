@@ -3,11 +3,10 @@ import './WebsiteUpdates.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function UpdatesPage() {
-  const navigate=useNavigate();
-  const HadnleUpdateUnderProcessButon =()=>{
-    navigate("/new-update")
-
-  }
+  const navigate = useNavigate();
+  const HadnleUpdateUnderProcessButon = () => {
+    navigate('/new-update');
+  };
   return (
     <div className="updates-page-container">
       <div className="updates-page-header">
@@ -77,7 +76,9 @@ export default function UpdatesPage() {
       </div>
 
       <div className="updates-footer">
-        <button className='button-22' onClick={HadnleUpdateUnderProcessButon}>Update 0.0.6 (Under Process)</button>
+        <button className="button-22" onClick={HadnleUpdateUnderProcessButon}>
+          Update 0.0.6 (Under Process)
+        </button>
       </div>
     </div>
   );

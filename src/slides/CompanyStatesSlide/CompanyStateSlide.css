@@ -1,97 +1,96 @@
 .reviewOfWork {
-    /* background-color: orange;  */
-    background-color: lightgreen;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px 10px;
-    box-sizing: border-box;
-    gap: 20px; /* Adds spacing between boxes */
-  }
-  
+  /* background-color: orange;  */
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  gap: 20px; /* Adds spacing between boxes */
+}
+
+.boxes {
+  flex: 1 1 calc(25% - 20px); /* Each box takes up 25% of the container width with spacing */
+  min-width: 150px; /* Prevents the boxes from becoming too small */
+  max-width: 300px; /* Adds a cap to the size */
+  /* background-color: #f37c20; */
+  background-color: green;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.boxes:hover {
+  transform: translateY(-10px); /* Adds a hover effect */
+}
+
+.numberWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberWrapper .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.numberWrapper .plusSign {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.boxes span {
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .boxes {
-    flex: 1 1 calc(25% - 20px); /* Each box takes up 25% of the container width with spacing */
-    min-width: 150px; /* Prevents the boxes from becoming too small */
-    max-width: 300px; /* Adds a cap to the size */
-    /* background-color: #f37c20; */
-    background-color: green;
-    border-radius: 10px; /* Rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+    flex: 1 1 calc(33.33% - 20px); /* Adjust to 3 boxes per row */
   }
-  
-  .boxes:hover {
-    transform: translateY(-10px); /* Adds a hover effect */
+}
+
+@media (max-width: 768px) {
+  .reviewOfWork {
+    justify-content: center; /* Center align boxes */
   }
-  
-  .numberWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .boxes {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 boxes per row */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .reviewOfWork {
+    justify-content: center; /* Ensure the boxes are centered */
+  }
+
+  .boxes {
+    flex: 1 1 100%; /* Full-width boxes */
+    max-width: 300px; /* Center box with a max width */
+    margin: 0 auto; /* Center boxes horizontally */
+  }
+
   .numberWrapper .number {
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 5px;
+    font-size: 40px; /* Adjust size for smaller screens */
   }
-  
+
   .numberWrapper .plusSign {
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 40px;
   }
-  
+
   .boxes span {
-    display: block;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 18px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .boxes {
-      flex: 1 1 calc(33.33% - 20px); /* Adjust to 3 boxes per row */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .reviewOfWork {
-      justify-content: center; /* Center align boxes */
-    }
-  
-    .boxes {
-      flex: 1 1 calc(50% - 20px); /* Adjust to 2 boxes per row */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .reviewOfWork {
-      justify-content: center; /* Ensure the boxes are centered */
-    }
-  
-    .boxes {
-      flex: 1 1 100%; /* Full-width boxes */
-      max-width: 300px; /* Center box with a max width */
-      margin: 0 auto; /* Center boxes horizontally */
-    }
-  
-    .numberWrapper .number {
-      font-size: 40px; /* Adjust size for smaller screens */
-    }
-  
-    .numberWrapper .plusSign {
-      font-size: 40px;
-    }
-  
-    .boxes span {
-      font-size: 18px;
-    }
-  }
-  
+}

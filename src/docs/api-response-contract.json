@@ -1,0 +1,125 @@
+{
+  "commonStructure": {
+    "success": true,
+    "httpStatus": 200,
+    "code": "SUCCESS",
+    "message": "Human readable message",
+    "data": {},
+    "meta": {}
+  },
+
+  "examples": {
+    "GET_SUCCESS": {
+      "success": true,
+      "httpStatus": 200,
+      "code": "DATA_FETCHED",
+      "message": "Data fetched successfully.",
+      "data": {
+        "id": "USR-101",
+        "name": "Ajay Shakya",
+        "email": "ajay@example.com"
+      },
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "GET_NOT_FOUND": {
+      "success": false,
+      "httpStatus": 404,
+      "code": "DATA_001",
+      "message": "Requested data does not exist.",
+      "data": null,
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "POST_CREATED": {
+      "success": true,
+      "httpStatus": 201,
+      "code": "DATA_CREATED",
+      "message": "Record created successfully.",
+      "data": {
+        "id": "CMT-001"
+      },
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "VALIDATION_ERROR": {
+      "success": false,
+      "httpStatus": 400,
+      "code": "VAL_001",
+      "message": "Invalid input data provided.",
+      "data": {
+        "fieldErrors": {
+          "email": "Invalid email format",
+          "password": "Minimum 8 characters required"
+        }
+      },
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "UPDATE_SUCCESS": {
+      "success": true,
+      "httpStatus": 200,
+      "code": "DATA_UPDATED",
+      "message": "Record updated successfully.",
+      "data": {
+        "updated": true
+      },
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "DELETE_SUCCESS": {
+      "success": true,
+      "httpStatus": 200,
+      "code": "DATA_DELETED",
+      "message": "Record deleted successfully.",
+      "data": null,
+      "meta": {
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "AUTH_EXPIRED": {
+      "success": false,
+      "httpStatus": 401,
+      "code": "AUTH_003",
+      "message": "Your session has expired. Please login again.",
+      "data": null,
+      "meta": {
+        "logout": true,
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "SERVER_ERROR": {
+      "success": false,
+      "httpStatus": 500,
+      "code": "SRV_001",
+      "message": "Something went wrong on the server.",
+      "data": null,
+      "meta": {
+        "requestId": "REQ-983473",
+        "timestamp": "2024-12-02T10:30:00Z"
+      }
+    },
+
+    "meta": {
+      "requestId": "REQ-983473",
+      "timestamp": "2024-12-02T10:30:00Z",
+      "page": 1,
+      "limit": 10,
+      "total": 120,
+      "logout": false,
+      "redirect": "/login"
+    }
+  }
+}

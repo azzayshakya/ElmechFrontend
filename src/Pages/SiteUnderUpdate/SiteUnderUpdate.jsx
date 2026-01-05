@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './SiteUnderUpdate.css'
+import './SiteUnderUpdate.css';
 const UpdateComingSoonPage = () => {
   return (
     <div className="coming-soon-container">
-      <motion.div 
+      <motion.div
         className="coming-soon-content"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -18,7 +18,7 @@ const UpdateComingSoonPage = () => {
           transition={{
             repeat: Infinity,
             duration: 2,
-            ease: "linear"
+            ease: 'linear',
           }}
         ></motion.div>
         <p className="coming-soon-message">Hang tight. We'll be back soon!</p>

@@ -12,7 +12,7 @@ export default function AboutUsMain() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.01}
+      { threshold: 0.01 }
     );
 
     if (aboutUsRef.current) {
@@ -28,26 +28,20 @@ export default function AboutUsMain() {
 
   return (
     <div>
-      <div
-        className={`aboutUs ${isVisible ? 'animate' : ''}`}
-        ref={aboutUsRef}
-      >
+      <div className={`aboutUs ${isVisible ? 'animate' : ''}`} ref={aboutUsRef}>
         <div className="leftside">
-          <span className={`AboutUs ${isVisible ? 'slideFromDown' : ''}`}>
-            ABOUT US
-          </span>
+          <span className={`AboutUs ${isVisible ? 'slideFromDown' : ''}`}>ABOUT US</span>
           <span className={isVisible ? 'slideFromDown' : ''}>
             Transforming spaces creating memories
           </span>
           <p className={isVisible ? 'slideFromDown' : ''}>
-            ElMech India Engineers, founded by Mr. Anil K. Shakya with over 12
-            years of experience, specializes in Electrical, Firefighting, and
-            Building Services. The company has successfully executed more than
-            50 projects across various sectors, including IT buildings, hotels,
-            hospitals, and infrastructure for both private and government
-            clients. With a commitment to delivering quality from
-            conceptualization to completion, ElMech India Engineers ensures
-            international standards and customer satisfaction on every project.
+            ElMech India Engineers, founded by Mr. Anil K. Shakya with over 12 years of experience,
+            specializes in Electrical, Firefighting, and Building Services. The company has
+            successfully executed more than 50 projects across various sectors, including IT
+            buildings, hotels, hospitals, and infrastructure for both private and government
+            clients. With a commitment to delivering quality from conceptualization to completion,
+            ElMech India Engineers ensures international standards and customer satisfaction on
+            every project.
           </p>
         </div>
         <div className="rightSide">

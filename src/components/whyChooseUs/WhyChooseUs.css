@@ -1,177 +1,170 @@
-
 .WhyUs {
-    padding: 5rem 10rem; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* border: 1px red solid; */
+  padding: 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* border: 1px red solid; */
 }
 
 .top {
-    margin-bottom: 30px;
-    /* border: 1px red solid; */
+  margin-bottom: 30px;
+  /* border: 1px red solid; */
 }
 
 .top span {
-    font-size: 17px;
-    font-weight: bold;
-    color: #555;
+  font-size: 17px;
+  font-weight: bold;
+  color: #555;
 
-    display: block;
+  display: block;
 }
 
 .top p {
-    font-size: 40px;
-    font-weight: bolder;
-    /* color: #555; */
-    color: #333;
-    margin-bottom: 0px;
-    margin-top: 15px;
-
-
+  font-size: 40px;
+  font-weight: bolder;
+  /* color: #555; */
+  color: #333;
+  margin-bottom: 0px;
+  margin-top: 15px;
 }
 
 .BottomOfWhyUs {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    margin-top: 50px;
-    /* border: 1px red solid; */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  /* border: 1px red solid; */
 }
 
 .leftRowInWhyUs,
 .MidRowInWhyUs,
 .RightRowInWhyUs {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px blue solid; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px blue solid; */
 }
 
 .MidRowInWhyUs img {
-    width: 90%; 
-    height: 100%;
-    max-width: 400px; 
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .BoxOfWhyUs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 40px 20px;
-    width: 80%; 
-    border-radius: 10px;
-    transition: transform 0.3s ease, border-color 0.1s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* border: 3px green solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px 20px;
+  width: 80%;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border: 3px green solid; */
 }
 
 .BoxOfWhyUs:hover {
-    transform: translateY(-5px);
-    border: 2px solid lightgreen;
+  transform: translateY(-5px);
+  border: 2px solid lightgreen;
 }
 
 .BoxOfWhyUs div:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .BoxOfWhyUs div:last-child span {
-    font-size: 30px;
-    color: lightgreen;
-    transition: transform 0.3s ease;
+  font-size: 30px;
+  color: lightgreen;
+  transition: transform 0.3s ease;
 }
 
 .BoxOfWhyUs:hover div:last-child span {
-    transform: rotate(360deg); /* Rotate the logo 180 degrees on hover */
+  transform: rotate(360deg); /* Rotate the logo 180 degrees on hover */
 }
 
 .BoxOfWhyUs span {
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    color: #333;
-    /* border: 1px red solid; */
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  color: #333;
+  /* border: 1px red solid; */
 }
 
 .BoxOfWhyUs p {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
-    /* border: 1px red solid; */
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  /* border: 1px red solid; */
 }
 
-
-
 @media (max-width: 1024px) {
-    .WhyUs {
-        padding: 2rem 3.5rem;
-    }
+  .WhyUs {
+    padding: 2rem 3.5rem;
+  }
 
-    .BottomOfWhyUs {
-        flex-direction: column; /* Stack the sections vertically on smaller screens */
-        align-items: center;
-    }
-    
+  .BottomOfWhyUs {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+    align-items: center;
+  }
 
-    .leftRowInWhyUs,
-    .RightRowInWhyUs {
-        flex: none;
-        width: 100%;
-        /* border: 2px red solid; */
-        
-       
-    }
+  .leftRowInWhyUs,
+  .RightRowInWhyUs {
+    flex: none;
+    width: 100%;
+    /* border: 2px red solid; */
+  }
 
-    .MidRowInWhyUs img {
-        display: none;
-    }
+  .MidRowInWhyUs img {
+    display: none;
+  }
 
-    .BoxOfWhyUs {
-        width: 100%;
-    }
-    .BottomOfWhyUs .BoxOfWhyUs{
-        margin-bottom: 2rem; 
-    }
+  .BoxOfWhyUs {
+    width: 100%;
+  }
+  .BottomOfWhyUs .BoxOfWhyUs {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 1024px) {
-    .top{
-        /* text-align: left; */
-    }
-}/* Animation Keyframes */
+  .top {
+    /* text-align: left; */
+  }
+} /* Animation Keyframes */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px); /* Slide up */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Fade-in Animation */
-  .fade-in {
+  from {
     opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
+    transform: translateY(20px); /* Slide up */
   }
-  
-  /* Box Animation */
-  .BoxOfWhyUs {
-    opacity: 0; /* Initially hidden */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .BoxOfWhyUs.fade-in {
-    animation: fadeIn 0.8s ease forwards;
-  }
-  
-  /* Adjust the animation delay dynamically */
-  .BoxOfWhyUs {
-    animation-delay: 0s; /* Dynamic delay passed via inline style */
-  }
-  
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Box Animation */
+.BoxOfWhyUs {
+  opacity: 0; /* Initially hidden */
+}
+.BoxOfWhyUs.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Adjust the animation delay dynamically */
+.BoxOfWhyUs {
+  animation-delay: 0s; /* Dynamic delay passed via inline style */
+}

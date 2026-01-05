@@ -1,9 +1,13 @@
-import React from 'react'
-import HeroSectionMain from './HeroSectionMain'
-import "./heroSection.css";
+import HeroSectionMain from './HeroSectionMain';
+import './heroSection.css';
 
-export default function HeroSectionPage() {
+const HeroSectionPage = () => {
+  // console.log('azaz ', currentEnv);
   return (
-    <div className='HeroSectionPage'><HeroSectionMain/></div>
-  )
-}
+    <div className="HeroSectionPage">
+      <HeroSectionMain />
+    </div>
+  );
+};
+
+export default HeroSectionPage;

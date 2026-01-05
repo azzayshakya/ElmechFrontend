@@ -21,17 +21,17 @@ export default function UserQueriesPage() {
 
       // Time filter
       if (timeFilter === 'lastHour') {
-        filtered = filtered.filter(query => {
+        filtered = filtered.filter((query) => {
           const queryDate = new Date(query.createdAt);
           return now - queryDate <= 60 * 60 * 1000;
         });
       } else if (timeFilter === 'lastDay') {
-        filtered = filtered.filter(query => {
+        filtered = filtered.filter((query) => {
           const queryDate = new Date(query.createdAt);
           return now - queryDate <= 24 * 60 * 60 * 1000;
         });
       } else if (timeFilter === 'lastMonth') {
-        filtered = filtered.filter(query => {
+        filtered = filtered.filter((query) => {
           const queryDate = new Date(query.createdAt);
           return now - queryDate <= 30 * 24 * 60 * 60 * 1000;
         });
@@ -39,7 +39,7 @@ export default function UserQueriesPage() {
 
       // Search filter
       if (searchName.trim()) {
-        filtered = filtered.filter(query =>
+        filtered = filtered.filter((query) =>
           query.name.toLowerCase().includes(searchName.toLowerCase())
         );
       }
@@ -118,9 +118,15 @@ export default function UserQueriesPage() {
                 </div>
               </div>
               <div className="query-details">
-                <p><strong>Mobile:</strong> {query.mobile}</p>
-                <p><strong>Location:</strong> {query.location}</p>
-                <p><strong>Message:</strong> {query.message}</p>
+                <p>
+                  <strong>Mobile:</strong> {query.mobile}
+                </p>
+                <p>
+                  <strong>Location:</strong> {query.location}
+                </p>
+                <p>
+                  <strong>Message:</strong> {query.message}
+                </p>
               </div>
               <p className="query-timestamp">
                 Submitted at: {new Date(query.createdAt).toLocaleString()}

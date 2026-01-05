@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // import "./Slidebar.css";
 
 const Slidebar = () => {
@@ -9,18 +9,14 @@ const Slidebar = () => {
   };
 
   return (
-    <div className={isOpen ? "open" : ""}>
+    <div className={isOpen ? 'open' : ''}>
       <button type="button" className="burger sidebarTogglebutton" onClick={toggleSidebar}>
         <img className="burger-avatar" src="./assets/avatar.png" alt="Avatar" />
         <span className="burger-icon"></span>
       </button>
       <div className="overlay" onClick={toggleSidebar}></div>
       <aside className="sidebar">
-        <img
-          className="sidebar-avatar"
-          src="./assets/avatar.png"
-          alt="Sidebar Avatar"
-        />
+        <img className="sidebar-avatar" src="./assets/avatar.png" alt="Sidebar Avatar" />
         <div className="sidebar-username">frontendjoe</div>
         <div className="sidebar-role">Frontend Developer</div>
         <nav className="sidebar-menu">

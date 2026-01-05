@@ -1,0 +1,2 @@
+1. image sliding background 
+.after every secound chnage the current image index and set it with the image array length index 

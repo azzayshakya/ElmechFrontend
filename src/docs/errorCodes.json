@@ -1,0 +1,73 @@
+{
+  "AUTH_001": {
+    "httpStatus": 401,
+    "title": "Unauthorized",
+    "message": "Authentication is required to access this resource.",
+    "description": "User is not logged in or token is missing.",
+    "action": "Ask user to login again."
+  },
+
+  "AUTH_002": {
+    "httpStatus": 403,
+    "title": "Forbidden",
+    "message": "You do not have permission to perform this action.",
+    "description": "User is authenticated but lacks required role or permission.",
+    "action": "Check user role or access policy."
+  },
+
+  "AUTH_003": {
+    "httpStatus": 401,
+    "title": "Session Expired",
+    "message": "Your session has expired. Please login again.",
+    "description": "JWT or session token is expired or invalid.",
+    "action": "Force logout and redirect to login."
+  },
+
+  "VAL_001": {
+    "httpStatus": 400,
+    "title": "Validation Error",
+    "message": "Invalid input data provided.",
+    "description": "One or more fields failed validation rules.",
+    "action": "Highlight invalid fields and show validation message."
+  },
+
+  "VAL_002": {
+    "httpStatus": 400,
+    "title": "Missing Required Field",
+    "message": "Required data is missing.",
+    "description": "Mandatory field was not sent in request.",
+    "action": "Ensure all required fields are sent."
+  },
+
+  "DATA_001": {
+    "httpStatus": 404,
+    "title": "Data Not Found",
+    "message": "Requested data does not exist.",
+    "description": "Record not found in database.",
+    "action": "Verify request parameters or show empty state."
+  },
+
+  "DATA_002": {
+    "httpStatus": 409,
+    "title": "Duplicate Data",
+    "message": "This data already exists.",
+    "description": "Unique constraint violation (email, phone, etc).",
+    "action": "Ask user to use different value."
+  },
+
+  "SRV_001": {
+    "httpStatus": 500,
+    "title": "Internal Server Error",
+    "message": "Something went wrong on the server.",
+    "description": "Unhandled exception or server crash.",
+    "action": "Retry later or contact support."
+  },
+
+  "SRV_002": {
+    "httpStatus": 503,
+    "title": "Service Unavailable",
+    "message": "Service is temporarily unavailable.",
+    "description": "Server under maintenance or overload.",
+    "action": "Retry after some time."
+  }
+}

@@ -2,7 +2,7 @@
 import { useMutation } from '@tanstack/react-query';
 import { getAllQueriesApi } from '../apis/getAllQueriesApi'; // Your API function
 import { useState } from 'react';
-import { getAllQueries } from "../../../apis/apiService"; // Import the API call
+import { getAllQueries } from '../../../apis/apiService'; // Import the API call
 import toast from 'react-hot-toast';
 /**
  * Custom hook for fetching all queries.
@@ -21,7 +21,7 @@ export const useGetAllQueries = () => {
   } = useMutation({
     mutationFn: getAllQueries, // Function to fetch the queries
     onSuccess: (data) => {
-      toast.success("Queries fetched successfully! 🎉")
+      toast.success('Queries fetched successfully! 🎉');
 
       setQueries(data); // Store the fetched data in state
       // toast.success('Queries fetched successfully! 🎉');
@@ -29,7 +29,7 @@ export const useGetAllQueries = () => {
     onError: (error) => {
       // Handle error gracefully
       const errorMessage = error?.response?.data?.message || 'Failed to fetch queries.';
-      toast.error(errorMessage)
+      toast.error(errorMessage);
     },
     onSettled: () => {
       // console.log('Fetch queries mutation has settled.');

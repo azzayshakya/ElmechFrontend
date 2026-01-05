@@ -1,10 +1,9 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".", 
-      "paths": {
-        "@/react-kit/*": ["./react-kit/*"],
-        "@/*": ["./src/*"]  
-      }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/react-kit/*": ["./react-kit/*"],
+      "@/*": ["./src/*"]
     }
   }
-  
+}

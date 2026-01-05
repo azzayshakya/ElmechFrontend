@@ -1,7 +1,7 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation } from '@tanstack/react-query';
 import { submitComment } from '../../../apis/apiService';
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export const useSubmitComment = () => {
   const navigate = useNavigate();
@@ -16,21 +16,18 @@ export const useSubmitComment = () => {
     mutationFn: submitComment,
     onSuccess: () => {
       toast.success(
-        "Thank you for sharing your experience! Your comment has been received and will help others. 😊",
+        'Thank you for sharing your experience! Your comment has been received and will help others. 😊',
         {
-          duration: 5000, 
+          duration: 5000,
         }
       );
-      navigate("/")
+      navigate('/');
     },
     onError: (error) => {
-      toast.error(
-        `Oops! Something went wrong. Please try again later.`,
-        
-      );
+      toast.error(`Oops! Something went wrong. Please try again later.`);
     },
     onSettled: () => {
-      console.log("Mutation has settled");
+      console.log('Mutation has settled');
     },
   });
 

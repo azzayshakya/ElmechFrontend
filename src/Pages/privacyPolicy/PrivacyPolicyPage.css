@@ -72,19 +72,19 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-.privacy-policy-container {
-  padding: 20px;
-}
+  .privacy-policy-container {
+    padding: 20px;
+  }
 
-.privacy-policy-title {
-  font-size: 28px;
-}
+  .privacy-policy-title {
+    font-size: 28px;
+  }
 
-.privacy-policy-section-title {
-  font-size: 20px;
-}
+  .privacy-policy-section-title {
+    font-size: 20px;
+  }
 
-.privacy-policy-content {
-  padding: 15px;
-}
+  .privacy-policy-content {
+    padding: 15px;
+  }
 }

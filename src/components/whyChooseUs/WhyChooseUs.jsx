@@ -1,7 +1,7 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
-import "./WhyChooseUs.css";
-import { GiSkills } from "react-icons/gi";
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import './WhyChooseUs.css';
+import { GiSkills } from 'react-icons/gi';
 
 function AnimatedBox({ title, description, icon, delay }) {
   const { ref, inView } = useInView({
@@ -12,7 +12,7 @@ function AnimatedBox({ title, description, icon, delay }) {
   return (
     <div
       ref={ref}
-      className={`BoxOfWhyUs ${inView ? "fade-in" : ""}`}
+      className={`BoxOfWhyUs ${inView ? 'fade-in' : ''}`}
       style={{ animationDelay: `${delay}s` }}
     >
       <div>
@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
 
   return (
     <div className="WhyUs">
-      <div ref={headerRef} className={`top ${headerInView ? "fade-in" : ""}`}>
+      <div ref={headerRef} className={`top ${headerInView ? 'fade-in' : ''}`}>
         <span>WHY CHOOSE US</span>
         <p>High Quality Innovative Design</p>
       </div>

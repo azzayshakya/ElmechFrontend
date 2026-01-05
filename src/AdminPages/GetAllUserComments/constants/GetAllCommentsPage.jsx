@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useGetAllComments } from '../hooks/useGetAllComments';
 import '../css/UserCommentsPage.css';
-import { RotatingLines } from "react-loader-spinner";
+import { RotatingLines } from 'react-loader-spinner';
 export default function GetAllCommentsPage() {
   const { fetchComments, comments, isLoading, isError, error } = useGetAllComments();
   const [filteredComments, setFilteredComments] = useState(comments);
@@ -20,17 +20,17 @@ export default function GetAllCommentsPage() {
 
       // Apply time-based filtering
       if (timeFilter === 'lastHour') {
-        filtered = filtered.filter(comment => {
+        filtered = filtered.filter((comment) => {
           const commentDate = new Date(comment.createdAt);
           return now - commentDate <= 60 * 60 * 1000; // Last 1 hour
         });
       } else if (timeFilter === 'lastDay') {
-        filtered = filtered.filter(comment => {
+        filtered = filtered.filter((comment) => {
           const commentDate = new Date(comment.createdAt);
           return now - commentDate <= 24 * 60 * 60 * 1000; // Last 24 hours
         });
       } else if (timeFilter === 'lastMonth') {
-        filtered = filtered.filter(comment => {
+        filtered = filtered.filter((comment) => {
           const commentDate = new Date(comment.createdAt);
           return now - commentDate <= 30 * 24 * 60 * 60 * 1000; // Last 30 days
         });
@@ -39,8 +39,8 @@ export default function GetAllCommentsPage() {
       // Apply name-based filtering using regex
       if (nameFilter) {
         const regex = new RegExp(nameFilter, 'i'); // 'i' for case-insensitive matching
-        filtered = filtered.filter(comment =>
-          regex.test(comment.firstName) || regex.test(comment.lastName)
+        filtered = filtered.filter(
+          (comment) => regex.test(comment.firstName) || regex.test(comment.lastName)
         );
       }
 
@@ -64,7 +64,6 @@ export default function GetAllCommentsPage() {
       <div className="loading-message">
         <div className="spinner"></div>
         <p>Loading your comments...</p>
-
       </div>
     );
   }
@@ -107,7 +106,6 @@ export default function GetAllCommentsPage() {
             </select>
           </div>
         </div>
-
       </div>
 
       {filteredComments.length > 0 ? (
@@ -116,17 +114,26 @@ export default function GetAllCommentsPage() {
             <div key={comment._id || index} className="comment-card">
               <div className="comment-header">
                 <div className="comment-avatar">
-                  {comment.firstName[0]}{comment.lastName[0]}
+                  {comment.firstName[0]}
+                  {comment.lastName[0]}
                 </div>
                 <div className="comment-info">
-                  <h3 className="comment-name">{comment.firstName} {comment.lastName}</h3>
+                  <h3 className="comment-name">
+                    {comment.firstName} {comment.lastName}
+                  </h3>
                   <p className="comment-profession">{comment.profession}</p>
                 </div>
               </div>
               <div className="comment-details">
-                <p><strong>Email:</strong> {comment.email}</p>
-                <p><strong>Phone:</strong> {comment.phone}</p>
-                <p><strong>Gender:</strong> {comment.gender}</p>
+                <p>
+                  <strong>Email:</strong> {comment.email}
+                </p>
+                <p>
+                  <strong>Phone:</strong> {comment.phone}
+                </p>
+                <p>
+                  <strong>Gender:</strong> {comment.gender}
+                </p>
               </div>
               <div className="comment-body">
                 <p>{comment.comment}</p>
@@ -139,15 +146,14 @@ export default function GetAllCommentsPage() {
         </div>
       ) : (
         <div className="no-comments-message-here">
-            <RotatingLines
-              strokeColor="grey"
-              strokeWidth="5"
-              animationDuration="5s"
-              width="96"
-              visible={true}
-            />
-            <p>Loading your comments...</p>
-
+          <RotatingLines
+            strokeColor="grey"
+            strokeWidth="5"
+            animationDuration="5s"
+            width="96"
+            visible={true}
+          />
+          <p>Loading your comments...</p>
         </div>
       )}
     </div>

@@ -1,147 +1,157 @@
 .HeroSectionPage {
-    height: 100vh;
-
+  height: 100vh;
 }
 
 .mainHome .homeSlideView {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    transition: background-image 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transition: background-image 1s ease-in-out;
 }
 
 .firstSlide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 0rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0rem 10rem;
 }
 
 .FirstSlideTagLine {
-    text-align: left;
-    max-width: 55rem;
+  text-align: left;
+  max-width: 55rem;
 }
 
 .firstSlide span {
-
-    color: #ffffff;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    font-size: 3rem;
-    line-height: 1.2;
-    font-size: 700;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-size: 700;
 }
 
 .firstSlide p {
-    color: #d3d3d3;
-    font-family: "Roboto", sans-serif;
-    margin: 1rem 0;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-size: 300;
-
+  color: #d3d3d3;
+  font-family: 'Roboto', sans-serif;
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-size: 300;
 }
 
 .firstSlide button {
-
-    background-color: #c2fbd7;
-    border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
-    color: green;
-    cursor: pointer;
-    display: inline-block;
-    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 0.5rem 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 10rem;
-
-
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow:
+    rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px,
+    rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px,
+    rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family:
+    CerebriSans-Regular,
+    -apple-system,
+    system-ui,
+    Roboto,
+    sans-serif;
+  padding: 0.5rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10rem;
 }
 
 .firstSlide button:hover {
-    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
-    transform: scale(1.05) rotate(0deg);
+  box-shadow:
+    rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px,
+    rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px,
+    rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(0deg);
 }
 
-
 @media screen and (max-width: 1200px) {
-    .firstSlide span {
-        font-size: 48px;
-    }
+  .firstSlide span {
+    font-size: 48px;
+  }
 
-    .firstSlide p {
-        font-size: 16px;
-    }
+  .firstSlide p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .firstSlide {
-        padding: 2rem 3.5rem;
-    }
+  .firstSlide {
+    padding: 2rem 3.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .firstSlide span {
-        font-size: 36px;
-    }
+  .firstSlide span {
+    font-size: 36px;
+  }
 
-    .firstSlide p {
-        font-size: 14px;
-    }
+  .firstSlide p {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .firstSlide span {
-        font-size: 28px;
-    }
+  .firstSlide span {
+    font-size: 28px;
+  }
 
-    .firstSlide p {
-        font-size: 12px;
-    }
+  .firstSlide p {
+    font-size: 12px;
+  }
 }
 
 /* Animation keyframes */
 @keyframes slideFromDown {
-    from {
-        opacity: 0;
-        transform: translateY(20rem);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Apply animation to span, p, and button */
 .firstSlide span,
 .firstSlide p,
 .firstSlide button {
-    opacity: 0;
-    /* Initially hidden */
-    animation: slideFromDown 0.8s ease-in-out forwards;
+  opacity: 0;
+  /* Initially hidden */
+  animation: slideFromDown 0.8s ease-in-out forwards;
 }
 
 /* Delay the animations for sequential appearance */
 .firstSlide span {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .firstSlide p {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .firstSlide button {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }

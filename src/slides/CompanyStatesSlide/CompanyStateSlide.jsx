@@ -5,7 +5,7 @@ export default function CompanyStateSlide() {
   const animateNumbers = (targetElements) => {
     targetElements.forEach((el) => {
       let count = 0;
-      const target = parseInt(el.getAttribute("data-target"), 10);
+      const target = parseInt(el.getAttribute('data-target'), 10);
       const increment = target / 100;
       const interval = setInterval(() => {
         count += increment;
@@ -24,7 +24,7 @@ export default function CompanyStateSlide() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const numberElements = document.querySelectorAll(".number");
+            const numberElements = document.querySelectorAll('.number');
             animateNumbers(numberElements);
             observer.disconnect();
           }
@@ -39,15 +39,17 @@ export default function CompanyStateSlide() {
   return (
     <div className="reviewOfWork">
       {[
-        { target: "300", text: "Happy Customers" },
-        { target: "310", text: "Completed Projects" },
-        { target: "23", text: "Team Members" },
-        { target: "12", text: "Years of Working" },
+        { target: '300', text: 'Happy Customers' },
+        { target: '310', text: 'Completed Projects' },
+        { target: '23', text: 'Team Members' },
+        { target: '12', text: 'Years of Working' },
       ].map((item, index) => (
         <div className="boxes" key={index}>
           <div>
             <div className="numberWrapper">
-              <p data-target={item.target} className="number">0</p>
+              <p data-target={item.target} className="number">
+                0
+              </p>
               <span className="plusSign">+</span>
             </div>
             <span>{item.text}</span>

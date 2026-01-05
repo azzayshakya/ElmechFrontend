@@ -1,5 +1,5 @@
 import React from 'react';
-import {  AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import { Spinner } from 'flowbite-react';
 const Popup = ({ message, type, onClose }) => {
   let icon;
@@ -30,7 +30,9 @@ const Popup = ({ message, type, onClose }) => {
   }
 
   return (
-    <div className={`p-4 rounded-lg shadow-lg ${bgColor} flex items-center space-x-4 z-50 flex-shrink-0`}>
+    <div
+      className={`p-4 rounded-lg shadow-lg ${bgColor} flex items-center space-x-4 z-50 flex-shrink-0`}
+    >
       <div className="flex items-center space-x-2">
         {icon}
         <span>{message}</span>

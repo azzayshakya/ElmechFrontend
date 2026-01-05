@@ -1,7 +1,7 @@
-import { useMutation } from "@tanstack/react-query";
-import { getAllComments } from "../../../apis/apiService"; // Import the API call
-import { useState } from "react";
-import toast from "react-hot-toast";
+import { useMutation } from '@tanstack/react-query';
+import { getAllComments } from '../../../apis/apiService'; // Import the API call
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 /**
  * Custom hook for fetching all comments.
@@ -19,11 +19,11 @@ export const useGetAllComments = () => {
   } = useMutation({
     mutationFn: getAllComments, // Function to fetch comments
     onSuccess: (data) => {
-      toast.success("Comments fetched successfully! 🎉");
+      toast.success('Comments fetched successfully! 🎉');
       setComments(data);
     },
     onError: (error) => {
-      const errorMessage = error?.response?.data?.message || "Failed to fetch comments.";
+      const errorMessage = error?.response?.data?.message || 'Failed to fetch comments.';
       toast.error(errorMessage);
     },
   });
@@ -36,4 +36,3 @@ export const useGetAllComments = () => {
     error,
   };
 };
-
