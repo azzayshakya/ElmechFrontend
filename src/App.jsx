@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AuthProvider } from './userAuthentication/context/AuthContext';
@@ -27,6 +27,7 @@ import GetInTouchPage from './Forms/GetInTouchForm/GetInTouchPage';
 import CreateAccountMain from './auth/create-account/CreateAccountMain';
 import UpdateComingSoonPage from './Pages/SiteUnderUpdate/SiteUnderUpdate';
 import HeroSliderDummy from './dummy';
+import LogoLoader from './components/Loader/Loader';
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
       { path: '/privacyPolicy', element: <PrivacyPolicy /> },
       { path: '/new-update', element: <UpdateComingSoonPage /> },
       { path: '/dummy', element: <HeroSliderDummy /> },
+      { path: '/loader', element: <LogoLoader /> },
       { path: '/updates', element: <UpdatesPage /> },
       { path: '/create-account', element: <CreateAccountMain /> },
       {
@@ -73,14 +75,27 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="App">
-      <QueryClientProvider client={queryClient}>
-        <AuthProvider>
-          <RouterProvider router={router} />
-          <Toaster position="bottom-right" />
-        </AuthProvider>
-      </QueryClientProvider>
+      {loading ? (
+        <LogoLoader />
+      ) : (
+        <QueryClientProvider client={queryClient}>
+          <AuthProvider>
+            <RouterProvider router={router} />
+            <Toaster position="bottom-right" />
+          </AuthProvider>
+        </QueryClientProvider>
+      )}
     </div>
   );
 }
