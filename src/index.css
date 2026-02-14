@@ -17,17 +17,14 @@
   --biggerScreeenPadding: 5rem 10rem;
   --smallScreenPadding: 2rem 3.5rem;
 
-  /* hero sction main */
   --biggestHeading: 3rem;
   --biggerheading: 1rem;
   --normalHeading:;
 
-  /* hero section secoundry text */
   --normal-text: 1.25rem;
 
   --small-text:;
 
-  /* like error */
   --verySmallText:;
 }
 
@@ -35,38 +32,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-
-/* Default button styling */
-
-/* 
-  .firstSlide button {
-    background-color: lightgreen; 
-    color: #fff; 
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-}
-
-.firstSlide button:hover {
-    background-color: green; 
-    color: #d3d3d3; 
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
-}
-
-.firstSlide button:active {
-    transform: translateY(1px); 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-} 
-    
-*/
 
 @layer base {
   :root {

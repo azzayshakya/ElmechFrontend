@@ -4,7 +4,6 @@ import { IoConstructOutline } from 'react-icons/io5';
 import { PiFireTruckBold } from 'react-icons/pi';
 import { MdPlumbing } from 'react-icons/md';
 import { GiElectricalResistance } from 'react-icons/gi';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState(false);
