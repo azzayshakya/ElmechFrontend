@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import useSubmitGetInTouchForm from '../hooks/useSubmitGetInTouchForm'; // Correct default import
+import useSubmitGetInTouchForm from '../hooks/useSubmitGetInTouchForm';
 import { talkWithUsSchema } from '../schema/TalkWithUsSchema'; // Adjust path if necessary
 import { useDefineGetInTouchForm } from '../hooks/useDefineGetInTouchForm'; // Ensure this hook is defined and working
 import '../CSS/GetInTouchForm.css';
