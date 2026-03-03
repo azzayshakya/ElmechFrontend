@@ -1,0 +1,210 @@
+:root {
+  --color-primary: #7fff7f;
+  --color-primary-dark: #5fdf5f;
+  --color-accent: #48d1cc;
+  --color-accent-light: #40e0d0;
+  --color-dark: #000000;
+  --color-dark-gray: #2c3e50;
+  --color-text: #666666;
+  --color-text-dark: #333333;
+  --color-white: #fff;
+  --color-background: #ffffff;
+  --color-background-light: #f8f9fa;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-shadow-medium: rgba(0, 0, 0, 0.12);
+  --color-shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+.about-us-modern {
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-us-modern--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-us-modern__main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.about-us-modern__left-content {
+  max-width: 650px;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Badge Animation */
+.about-us-modern__badge--animate {
+  animation: slideUpFade 0.6s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+/* Title Animation */
+.about-us-modern__main-title--animate {
+  animation: slideUpFade 0.6s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Description Animation */
+.about-us-modern__description--animate {
+  animation: slideUpFade 0.6s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* Image Animation */
+.about-us-modern__image-wrapper--animate {
+  animation: scaleIn 0.8s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Stats Section Animation */
+.about-us-modern__stats-section--animate {
+  animation: slideUpFade 0.6s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Tab Panel Animation */
+.about-us-modern__tab-panel--animate {
+  animation: slideUpFade 0.4s ease forwards;
+  opacity: 0;
+}
+
+/* Hover Effects */
+.stat-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 35px var(--color-shadow-medium) !important;
+}
+
+.tab-button-modern:hover {
+  background: var(--color-background-light) !important;
+  color: var(--color-accent) !important;
+}
+
+.highlight-item:hover {
+  background: var(--color-white) !important;
+  box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 35px var(--color-shadow-medium) !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .about-us-modern__main-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-us-modern__left-content {
+    max-width: 100%;
+  }
+
+  .about-us-modern__right-image {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-modern {
+    padding: 4rem 1.5rem !important;
+  }
+
+  .about-us-modern__main-container {
+    gap: 3rem;
+  }
+
+  .about-us-modern__stats-section {
+    margin-top: 3rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-us-modern__tabs-section {
+    margin-top: 3rem !important;
+  }
+
+  .about-us-modern__tab-panel {
+    padding: 2rem !important;
+  }
+
+  .about-us-modern__why-section {
+    margin-top: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-us-modern__badge {
+    font-size: 0.9rem !important;
+  }
+
+  .stat-card-modern {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .tab-button-modern {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .about-us-modern__tab-panel {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Accessibility */
+.tab-button-modern:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-us-modern,
+  .about-us-modern__badge--animate,
+  .about-us-modern__main-title--animate,
+  .about-us-modern__description--animate,
+  .about-us-modern__image-wrapper--animate,
+  .about-us-modern__stats-section--animate,
+  .about-us-modern__tab-panel--animate {
+    animation: none !important;
+    transition: none !important;
+  }
+}
